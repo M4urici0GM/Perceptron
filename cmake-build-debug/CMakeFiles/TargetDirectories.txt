@@ -1,0 +1,3 @@
+C:/Users/Mauricio/CLionProjects/Perceptron/cmake-build-debug/CMakeFiles/Perceptron.dir
+C:/Users/Mauricio/CLionProjects/Perceptron/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Mauricio/CLionProjects/Perceptron/cmake-build-debug/CMakeFiles/rebuild_cache.dir
