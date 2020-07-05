@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Mauricio/CLionProjects/Perceptron/main.cpp" "C:/Users/Mauricio/CLionProjects/Perceptron/cmake-build-debug/CMakeFiles/Perceptron.dir/main.cpp.obj"
+  "C:/Users/Mauricio/CLionProjects/Perceptron/src/Perceptron.cpp" "C:/Users/Mauricio/CLionProjects/Perceptron/cmake-build-debug/CMakeFiles/Perceptron.dir/src/Perceptron.cpp.obj"
+  "C:/Users/Mauricio/CLionProjects/Perceptron/src/Utils.cpp" "C:/Users/Mauricio/CLionProjects/Perceptron/cmake-build-debug/CMakeFiles/Perceptron.dir/src/Utils.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.h
+vector
+-
+
 C:/Users/Mauricio/CLionProjects/Perceptron/main.cpp
 iostream
 -
-random
--
-chrono
--
 vector
 -
+./includes/Perceptron.h
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.h
 

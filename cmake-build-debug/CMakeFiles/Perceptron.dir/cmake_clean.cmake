@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Perceptron.dir/main.cpp.obj"
+  "CMakeFiles/Perceptron.dir/src/Perceptron.cpp.obj"
+  "CMakeFiles/Perceptron.dir/src/Utils.cpp.obj"
   "Perceptron.exe"
   "Perceptron.exe.manifest"
   "Perceptron.pdb"

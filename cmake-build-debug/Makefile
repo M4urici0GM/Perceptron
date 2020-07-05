@@ -149,6 +149,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Perceptron.obj: src/Perceptron.cpp.obj
+
+.PHONY : src/Perceptron.obj
+
+# target to build an object file
+src/Perceptron.cpp.obj:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Perceptron.cpp.obj
+.PHONY : src/Perceptron.cpp.obj
+
+src/Perceptron.i: src/Perceptron.cpp.i
+
+.PHONY : src/Perceptron.i
+
+# target to preprocess a source file
+src/Perceptron.cpp.i:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Perceptron.cpp.i
+.PHONY : src/Perceptron.cpp.i
+
+src/Perceptron.s: src/Perceptron.cpp.s
+
+.PHONY : src/Perceptron.s
+
+# target to generate assembly for a file
+src/Perceptron.cpp.s:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Perceptron.cpp.s
+.PHONY : src/Perceptron.cpp.s
+
+src/Utils.obj: src/Utils.cpp.obj
+
+.PHONY : src/Utils.obj
+
+# target to build an object file
+src/Utils.cpp.obj:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Utils.cpp.obj
+.PHONY : src/Utils.cpp.obj
+
+src/Utils.i: src/Utils.cpp.i
+
+.PHONY : src/Utils.i
+
+# target to preprocess a source file
+src/Utils.cpp.i:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Utils.cpp.i
+.PHONY : src/Utils.cpp.i
+
+src/Utils.s: src/Utils.cpp.s
+
+.PHONY : src/Utils.s
+
+# target to generate assembly for a file
+src/Utils.cpp.s:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Utils.cpp.s
+.PHONY : src/Utils.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +215,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Perceptron.obj
+	@echo ... src/Perceptron.i
+	@echo ... src/Perceptron.s
+	@echo ... src/Utils.obj
+	@echo ... src/Utils.i
+	@echo ... src/Utils.s
 .PHONY : help
 
 

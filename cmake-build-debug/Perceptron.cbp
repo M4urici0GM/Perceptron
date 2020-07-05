@@ -82,7 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.h">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Utils.h">
+			<Option target="Perceptron"/>
+		</Unit>
 		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/main.cpp">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/src/Perceptron.cpp">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/src/Utils.cpp">
 			<Option target="Perceptron"/>
 		</Unit>
 		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/CMakeLists.txt">
