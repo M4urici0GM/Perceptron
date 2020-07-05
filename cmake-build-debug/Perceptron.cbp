@@ -82,13 +82,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.h">
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Layer.hpp">
 			<Option target="Perceptron"/>
 		</Unit>
-		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Utils.h">
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Matrix.hpp">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Neuron.hpp">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.hpp">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/includes/Utils.hpp">
 			<Option target="Perceptron"/>
 		</Unit>
 		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/main.cpp">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/src/Layer.cpp">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/src/Matrix.cpp">
+			<Option target="Perceptron"/>
+		</Unit>
+		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/src/Neuron.cpp">
 			<Option target="Perceptron"/>
 		</Unit>
 		<Unit filename="C:/Users/Mauricio/CLionProjects/Perceptron/src/Perceptron.cpp">

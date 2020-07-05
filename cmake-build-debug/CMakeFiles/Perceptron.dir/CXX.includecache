@@ -6,15 +6,31 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.h
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Layer.hpp
 vector
 -
+Neuron.hpp
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Neuron.hpp
+Matrix.hpp
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Matrix.hpp
+
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Matrix.hpp
+vector
+-
+
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Neuron.hpp
+
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.hpp
+vector
+-
+Layer.hpp
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Layer.hpp
 
 C:/Users/Mauricio/CLionProjects/Perceptron/main.cpp
 iostream
 -
 vector
 -
-./includes/Perceptron.h
-C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.h
+./includes/Perceptron.hpp
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.hpp
 

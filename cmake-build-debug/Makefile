@@ -149,6 +149,87 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Layer.obj: src/Layer.cpp.obj
+
+.PHONY : src/Layer.obj
+
+# target to build an object file
+src/Layer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Layer.cpp.obj
+.PHONY : src/Layer.cpp.obj
+
+src/Layer.i: src/Layer.cpp.i
+
+.PHONY : src/Layer.i
+
+# target to preprocess a source file
+src/Layer.cpp.i:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Layer.cpp.i
+.PHONY : src/Layer.cpp.i
+
+src/Layer.s: src/Layer.cpp.s
+
+.PHONY : src/Layer.s
+
+# target to generate assembly for a file
+src/Layer.cpp.s:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Layer.cpp.s
+.PHONY : src/Layer.cpp.s
+
+src/Matrix.obj: src/Matrix.cpp.obj
+
+.PHONY : src/Matrix.obj
+
+# target to build an object file
+src/Matrix.cpp.obj:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Matrix.cpp.obj
+.PHONY : src/Matrix.cpp.obj
+
+src/Matrix.i: src/Matrix.cpp.i
+
+.PHONY : src/Matrix.i
+
+# target to preprocess a source file
+src/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Matrix.cpp.i
+.PHONY : src/Matrix.cpp.i
+
+src/Matrix.s: src/Matrix.cpp.s
+
+.PHONY : src/Matrix.s
+
+# target to generate assembly for a file
+src/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Matrix.cpp.s
+.PHONY : src/Matrix.cpp.s
+
+src/Neuron.obj: src/Neuron.cpp.obj
+
+.PHONY : src/Neuron.obj
+
+# target to build an object file
+src/Neuron.cpp.obj:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Neuron.cpp.obj
+.PHONY : src/Neuron.cpp.obj
+
+src/Neuron.i: src/Neuron.cpp.i
+
+.PHONY : src/Neuron.i
+
+# target to preprocess a source file
+src/Neuron.cpp.i:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Neuron.cpp.i
+.PHONY : src/Neuron.cpp.i
+
+src/Neuron.s: src/Neuron.cpp.s
+
+.PHONY : src/Neuron.s
+
+# target to generate assembly for a file
+src/Neuron.cpp.s:
+	$(MAKE) -f CMakeFiles\Perceptron.dir\build.make CMakeFiles/Perceptron.dir/src/Neuron.cpp.s
+.PHONY : src/Neuron.cpp.s
+
 src/Perceptron.obj: src/Perceptron.cpp.obj
 
 .PHONY : src/Perceptron.obj
@@ -215,6 +296,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Layer.obj
+	@echo ... src/Layer.i
+	@echo ... src/Layer.s
+	@echo ... src/Matrix.obj
+	@echo ... src/Matrix.i
+	@echo ... src/Matrix.s
+	@echo ... src/Neuron.obj
+	@echo ... src/Neuron.i
+	@echo ... src/Neuron.s
 	@echo ... src/Perceptron.obj
 	@echo ... src/Perceptron.i
 	@echo ... src/Perceptron.s
