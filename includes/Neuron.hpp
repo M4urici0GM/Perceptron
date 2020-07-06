@@ -11,11 +11,13 @@ public:
 
     double get_value();
     double get_activated_value();
+    double get_derivated_value();
     void set_value(double new_value);
     void activate();
 private:
     double value;
     double activated_value;
+    double derivated_value;
 };
 
 #endif //PERCEPTRON_NEURON_HPP

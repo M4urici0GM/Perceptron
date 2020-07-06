@@ -14,15 +14,12 @@ public:
     Perceptron(const std::vector<int> &topology);
 
     void initialize_network();
-    void train(int epochs);
-    void set_inputs(const std::vector<std::vector<double>> &inputs);
-    void set_targets(const std::vector<double> &targets);
+    void train(int epochs, Matrix inputs,Matrix targets);
     void set_learning_rate(double learning_rate);
-    void randomize_weights();
     void set_bias(std::vector<double> bias);
     void print_network();
     std::vector<double> get_error_history();
-    std::vector<double> predict(const std::vector<double> &inputs);
+    Matrix predict(const std::vector<double> &inputs);
 
 private:
     std::vector<int> topology;

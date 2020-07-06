@@ -6,15 +6,31 @@
 int main() {
 
 
-    Perceptron* perceptron = new Perceptron({ 4, 5, 3 });
+    Perceptron *perceptron = new Perceptron({4, 5, 3});
 
+    std::vector<std::vector<double>> inputs_vector = {
+            {4.6, 3.1, 1.5, 0.2},
+            {5.0, 3.4, 1.5, 0.2},
+            {6.6, 2.9, 4.6, 1.3},
+            {7.7, 3.8, 6.7, 2.2}
+    };
 
-    std::vector<double> output = perceptron->predict({ 4.8,3.0,1.4,0.3 });
+    std::vector<std::vector<double>> targets_vector = {
+            {1, 0, 0},
+            {1, 0, 0},
+            {0, 1, 0},
+            {0, 0, 1}
+    };
 
-    perceptron->print_network();
+    Matrix inputs(inputs_vector);
+    Matrix targets(targets_vector);
 
-    for (int i = 0; i < output.size(); i++) {
-        printf("Neuron %i: %f\n", i, output.at(i));
+    perceptron->train(500, inputs, targets);
+
+    auto output = perceptron->predict({5.2,2.7,3.9,1.4});
+
+    for (int i = 0; i < output.get_cols(); i++) {
+        printf("Neuron %i: %f\n", i, output.get_value(0, i));
     }
     return 0;
 }

@@ -32,3 +32,11 @@ Matrix* Layer::transform_to_matrix() {
     }
     return matrix;
 }
+
+Matrix* Layer::transform_to_derivated() {
+    auto* matrix = new Matrix(1,this->neurons.size(), false);
+    for (int i = 0; i < this->neurons.size(); i++) {
+        matrix->set_value(0, i, this->neurons.at(i)->get_derivated_value());
+    }
+    return matrix;
+}

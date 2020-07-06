@@ -16,7 +16,10 @@ public:
     static int sign(double x);
 
     static Matrix* multiply_matrix(Matrix* matrixA, Matrix* matrixB);
-    static std::vector<std::vector<double>> multiply_scalar(std::vector<std::vector<double>> matrix, double scalar);
+    static Matrix* subtract_matrix(Matrix* matrixA, Matrix* matrixB);
+    static Matrix* multiply_scalar(Matrix* matrix, double scalar);
+    static Matrix* hadamard_product(Matrix* matrixA, Matrix* matrixB);
+    static Matrix* sum(Matrix* matrixA, Matrix* matrixB);
 };
 
 #endif //PERCEPTRON_UTILS_HPP

@@ -18,6 +18,7 @@ public:
     Neuron* get_neuron(int index);
     Matrix* transform_to_matrix();
     Matrix* transform_to_matrix_activated();
+    Matrix* transform_to_derivated();
 private:
     int neuron_count;
     std::vector<Neuron*> neurons;
