@@ -133,6 +133,19 @@ void Perceptron::train(int epochs, Matrix inputs, Matrix targets) {
             auto* new_weighs = Utils::sum(current_weighs, weight_ho_deltas);
             this->weights_matrix.at(output_layer_index - 1) = new_weighs;
 
+
+            auto* hidden_gradients = this->layers.at(output_layer_index - 1)->transform_to_derivated();
+
+            auto* hidden_errors = Utils::multiply_matrix(current_weighs, output_errors->transpose());
+
+            hidden_gradients = Utils::hadamard_product(hidden_gradients, hidden_errors->transpose());
+
+            auto* input_layer_values = this->layers.at(0)->transform_to_matrix();
+
+            auto* weights_input_hidden_deltas = Utils::multiply_matrix(hidden_gradients->transpose(), input_layer_values);
+            auto* input_hidden_weights = this->weights_matrix.at(0);
+            auto* new_input_hidden_weights = Utils::sum(input_hidden_weights, weights_input_hidden_deltas->transpose());
+            this->weights_matrix.at(0) = new_input_hidden_weights;
         }
     }
 }
