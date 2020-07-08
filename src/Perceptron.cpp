@@ -8,6 +8,7 @@
 #include <afxres.h>
 #include <msacm.h>
 #include <algorithm>
+#include <cmath>
 
 #include "../includes/Perceptron.hpp"
 #include "../includes/Utils.hpp"
@@ -112,40 +113,50 @@ void Perceptron::train(int epochs, Matrix inputs, Matrix targets) {
             Matrix target_matrix({targets.get_row(i)});
             Matrix output_matrix = this->predict(row);
 
-            auto* current_weighs = this->weights_matrix.at(output_layer_index - 1);
 
-            //Error  = target - output
-            //Since both are matrix, we can just subtract the matrix to get the error
-            Matrix *output_errors = Utils::subtract_matrix(&target_matrix, &output_matrix);
+            //Calculate the error
+            // target - output
+            Matrix* output_errors = Utils::subtract_matrix(&output_matrix, &target_matrix);
 
-            //Gradients of the output layer
-            // f'(x) = (output * (1 - output)
-            auto* gradients = this->layers.at(output_layer_index)->transform_to_derivated();
-
-            //Multiply the gradients by the errors
-            gradients = Utils::hadamard_product(gradients, output_errors)->transpose();
-
-            //Multiply the gradients of the current layer by the previous layer's outputs and transpose it
-            auto* hidden_values = this->layers.at(output_layer_index - 1)->transform_to_matrix_activated();
-            auto* weight_ho_deltas = Utils::multiply_matrix(gradients, hidden_values)->transpose();
-
-            //The new weights will be the current weights + the delta weights
-            auto* new_weighs = Utils::sum(current_weighs, weight_ho_deltas);
-            this->weights_matrix.at(output_layer_index - 1) = new_weighs;
+            double global_error = 0.00;
+            for (int j = 0; j < output_errors->get_cols(); j++) {
+                double error = (((double)1/2) * std::pow(output_errors->get_value(0, j), 2));
+                global_error += error;
+            }
+            this->error_history.push_back(global_error);
 
 
-            auto* hidden_gradients = this->layers.at(output_layer_index - 1)->transform_to_derivated();
+            Matrix* output_derivatives = this->layers.at(output_layer_index)->transform_to_derivated();
 
-            auto* hidden_errors = Utils::multiply_matrix(current_weighs, output_errors->transpose());
+            Matrix* gradients_output_to_hidden = Utils::hadamard_product(output_errors, output_derivatives);
 
-            hidden_gradients = Utils::hadamard_product(hidden_gradients, hidden_errors->transpose());
+            Matrix* first_hidden_layer_outputs = this->layers.at(output_layer_index - 1)->transform_to_matrix_activated();
 
-            auto* input_layer_values = this->layers.at(0)->transform_to_matrix();
+            Matrix* delta_weights_output_hidden = Utils::multiply_matrix(gradients_output_to_hidden->transpose(), first_hidden_layer_outputs)->transpose();
 
-            auto* weights_input_hidden_deltas = Utils::multiply_matrix(hidden_gradients->transpose(), input_layer_values);
-            auto* input_hidden_weights = this->weights_matrix.at(0);
-            auto* new_input_hidden_weights = Utils::sum(input_hidden_weights, weights_input_hidden_deltas->transpose());
-            this->weights_matrix.at(0) = new_input_hidden_weights;
+            Matrix* new_weights_output_to_hidden = Utils::subtract_matrix(this->weights_matrix.at(output_layer_index - 1), delta_weights_output_hidden);
+
+            Matrix* weights_output_to_hidden = this->weights_matrix.at(output_layer_index - 1);
+
+
+//
+//            //First hidden to input
+//            //Z'
+            Matrix* first_hidden_derivatives = this->layers.at(output_layer_index - 1)->transform_to_derivated();
+            Matrix* input_values = this->layers.at(0)->transform_to_matrix();
+
+            Matrix* GpWTp = Utils::multiply_matrix(gradients_output_to_hidden, weights_output_to_hidden->transpose());
+
+            Matrix* new_gradients = Utils::hadamard_product(GpWTp, first_hidden_derivatives);
+
+            Matrix* delta_weights_hidden_input = Utils::multiply_matrix(input_values->transpose(), new_gradients);
+
+            Matrix* new_weights_hidden_input = Utils::subtract_matrix(this->weights_matrix.at(0), delta_weights_hidden_input);
+
+
+            this->weights_matrix.at(0) = new_weights_hidden_input;
+            this->weights_matrix.at(1) = new_weights_output_to_hidden;
+
         }
     }
 }

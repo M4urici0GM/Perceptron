@@ -26,11 +26,31 @@ vector
 Layer.hpp
 C:/Users/Mauricio/CLionProjects/Perceptron/includes/Layer.hpp
 
-C:/Users/Mauricio/CLionProjects/Perceptron/main.cpp
-iostream
--
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Utils.hpp
 vector
 -
-./includes/Perceptron.hpp
+Matrix.hpp
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Matrix.hpp
+
+C:/Users/Mauricio/CLionProjects/Perceptron/src/Perceptron.cpp
+vector
+-
+cassert
+-
+iostream
+-
+afxres.h
+-
+msacm.h
+-
+algorithm
+-
+cmath
+-
+../includes/Perceptron.hpp
 C:/Users/Mauricio/CLionProjects/Perceptron/includes/Perceptron.hpp
+../includes/Utils.hpp
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Utils.hpp
+../includes/Matrix.hpp
+C:/Users/Mauricio/CLionProjects/Perceptron/includes/Matrix.hpp
 
