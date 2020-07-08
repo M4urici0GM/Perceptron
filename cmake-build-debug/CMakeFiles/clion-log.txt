@@ -1,4 +1,1 @@
-C:\Users\Mauricio\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.7846.88\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Mauricio\CLionProjects\Perceptron
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Mauricio/CLionProjects/Perceptron/cmake-build-debug
+CMakeLists.txt not found in C:\Users\Mauricio\CLionProjects\Perceptron Select CMakeLists.txt file...
