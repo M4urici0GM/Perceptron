@@ -5,8 +5,6 @@
 #include <vector>
 #include <cassert>
 #include <iostream>
-#include <afxres.h>
-#include <msacm.h>
 #include <algorithm>
 #include <cmath>
 
