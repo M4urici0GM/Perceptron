@@ -6,10 +6,6 @@
 #include <ctime>
 #include <random>
 
-std::mt19937 generate(std::time(nullptr));
-std::uniform_real_distribution<> distribution(-1, 1);
-
-
 double Utils::sigmoid(double value)
 {
     return (value / (1.0 + value));
@@ -27,5 +23,8 @@ double Utils::derive(double value)
 
 double Utils::random_number()
 {
-    return distribution(generate);
+    std::random_device randomDevice;
+	std::mt19937 generate(randomDevice());
+	std::uniform_real_distribution<> distribution(0, 1);
+	return distribution(generate);
 }

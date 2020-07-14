@@ -1,5 +1,7 @@
 #include <eigen3/Eigen/Dense>
 #include <vector>
+#include <cassert>
+#include <iostream>
 
 #include "../../include/NeuralNetwork/Layer.hpp"
 #include "../../include/NeuralNetwork/Neuron.hpp"
@@ -8,6 +10,16 @@ OpenNN::Layer::Layer(int layer_size)
 {
     for (int i = 0; i < layer_size; i++)
         this->neurons.push_back(new Neuron(0.00));
+};
+
+OpenNN::Neuron* OpenNN::Layer::get_neuron(int index)
+{
+    if (index < 0 || index >= this->neurons.size())
+    {
+        std::cerr << "Invalid neuron index!" << std::endl;
+        assert(false);
+    }
+    return this->neurons.at(index);
 }
 
 Eigen::MatrixXd* OpenNN::Layer::to_matrix() {

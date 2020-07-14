@@ -20,6 +20,7 @@ namespace OpenNN
 
             int count();
             std::vector<Neuron *> get_neurons();
+            Neuron* get_neuron(int index);
         private:
             int layer_size();
             std::vector<Neuron *> neurons;

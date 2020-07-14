@@ -14,13 +14,10 @@ namespace OpenNN
             ~NeuralNetwork();
 
             void initialize_network();
-
             std::vector<Layer *> get_layers();            
             std::vector<Eigen::MatrixXd *> train(Eigen::MatrixXd inputs, Eigen::MatrixXd targets);
-
-            Layer *get_layer(int index);
-            double predict(Eigen::MatrixXd input);
-
+            Eigen::MatrixXd predict(std::vector<double> inputs);
+            Layer* get_layer(int index);
             void print_network();
 
         private:
