@@ -11,9 +11,9 @@ OpenNN::Layer::Layer(int layer_size)
 }
 
 Eigen::MatrixXd* OpenNN::Layer::to_matrix() {
-    Eigen::MatrixXd* matrix = new Eigen::MatrixXd(0, this->neurons.size());
+    Eigen::MatrixXd* matrix = new Eigen::MatrixXd(1, this->neurons.size());
     for (int i = 0; i < this->neurons.size(); i++) {
-        matrix->operator()(0, i) = this->neurons.at(i)->get_value();
+        (*matrix)(0, i) = this->neurons.at(i)->get_value();
     }
     return matrix;
 }
@@ -25,9 +25,9 @@ std::vector<OpenNN::Neuron *> OpenNN::Layer::get_neurons()
 
 Eigen::MatrixXd* OpenNN::Layer::to_matrix_activated()
 {
-    Eigen::MatrixXd* matrix = new Eigen::MatrixXd(0, this->neurons.size());
+    Eigen::MatrixXd* matrix = new Eigen::MatrixXd(1, this->neurons.size());
     for (int i = 0; i < this->neurons.size(); i++) {
-        matrix->operator()(0, i) = this->neurons.at(i)->get_activated_value();
+        (*matrix)(0, i) = this->neurons.at(i)->get_activated_value();
     }
     return matrix;
 }

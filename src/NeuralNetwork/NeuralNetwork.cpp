@@ -4,6 +4,7 @@
 
 #include "../../include/NeuralNetwork/NeuralNetwork.hpp"
 #include "../../include/Utils/Stopwatch.hpp"
+#include "../../include/Utils/Utils.hpp"
 
 OpenNN::NeuralNetwork::NeuralNetwork(std::vector<int> topology, double learning_rate)
 {
@@ -34,7 +35,13 @@ void OpenNN::NeuralNetwork::initialize_network()
         int next_layer_size = this->network_layers.at(i + 1)->get_neurons().size();
 
         Eigen::MatrixXd* matrix = new Eigen::MatrixXd(current_layer_size, next_layer_size);
-
+        for (int j = 0; j < current_layer_size; j++)
+            for (int k = 0; k < next_layer_size; k++)
+            {
+                double value = Utils::random_number();
+                (*matrix)(j, k) = value;
+            }
+                
         this->weight_matrices.push_back(matrix);
     }
     
@@ -46,9 +53,17 @@ void OpenNN::NeuralNetwork::initialize_network()
 
 void OpenNN::NeuralNetwork::print_network()
 {
-    for (int i = 0; i < this->network_layers.size(); i++)
+    int layer_count = this->network_layers.size();
+    for (int i = 0; i < layer_count; i++)
     {
+        std::cout << "Values for layer " << (i + 1) << std::endl;
         Layer* layer = this->network_layers.at(i);
-        std::cout << layer->to_matrix();
+        std::cout << *layer->to_matrix() << std::endl;
+        if (i != (layer_count - 1)) {
+            Eigen::MatrixXd weight_matrix = *this->weight_matrices.at(i);
+            std::cout << "Weight matrix for layer " << (i+1) << std::endl;
+            std::cout << weight_matrix << std::endl;
+        }
+        std::cout << "____________________" << std::endl;
     }
 }
