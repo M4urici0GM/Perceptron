@@ -19,7 +19,7 @@ namespace OpenNN
             Eigen::MatrixXd* to_matrix_derivated();
 
             int count();
-
+            std::vector<Neuron *> get_neurons();
         private:
             int layer_size();
             std::vector<Neuron *> neurons;

@@ -10,7 +10,12 @@ add_executable(
     include/NeuralNetwork/Layer.hpp
     include/NeuralNetwork/Neuron.hpp
     include/NeuralNetwork/NeuralNetwork.hpp
+    include/Utils/Utils.hpp
+    include/Utils/Stopwatch.hpp
     src/Utils/Utils.cpp
+    src/Utils/Stopwatch.cpp
+    src/NeuralNetwork/Neuron.cpp
+    src/NeuralNetwork/Layer.cpp
     src/NeuralNetwork/NeuralNetwork.cpp
     main.cpp
 )

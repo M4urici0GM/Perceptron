@@ -6,7 +6,6 @@ namespace OpenNN
     {
         public:
             Neuron(double initial_value);
-            ~Neuron();
 
             double get_value();
             double get_activated_value();
@@ -18,5 +17,7 @@ namespace OpenNN
             double value;
             double activated_value;
             double derivated_value;
+
+            void activate();
     };
 };

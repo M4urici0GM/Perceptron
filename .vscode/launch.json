@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/builds/neural_network.exe",
+            "program": "${workspaceFolder}/Perceptron",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -23,5 +23,6 @@
                 }
             ]
         }
+
     ]
 }

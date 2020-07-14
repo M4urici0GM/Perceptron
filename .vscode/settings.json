@@ -1,5 +1,5 @@
 {
     "files.associations": {
-        "chrono": "cpp"
-    },
+        "*.tcc": "cpp"
+    }
 }

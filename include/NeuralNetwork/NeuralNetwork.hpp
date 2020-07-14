@@ -21,6 +21,8 @@ namespace OpenNN
             Layer *get_layer(int index);
             double predict(Eigen::MatrixXd input);
 
+            void print_network();
+
         private:
             std::vector<Layer *> network_layers;
             std::vector<Eigen::MatrixXd *> weight_matrices;
