@@ -15,8 +15,8 @@ namespace OpenNN
 
             void initialize_network();
             std::vector<Layer *> get_layers();            
-            std::vector<Eigen::MatrixXd *> train(Eigen::MatrixXd inputs, Eigen::MatrixXd targets);
-            Eigen::MatrixXd predict(std::vector<double> inputs);
+            std::vector<Eigen::MatrixXd *> train(int epochs, Eigen::MatrixXd inputs, Eigen::MatrixXd targets);
+            Eigen::MatrixXd predict(Eigen::MatrixXd inputs);
             Layer* get_layer(int index);
             void print_network();
 

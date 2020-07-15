@@ -37,7 +37,120 @@ OpenNN::Layer* OpenNN::NeuralNetwork::get_layer(int index)
     return this->network_layers.at(index);
 }
 
-Eigen::MatrixXd OpenNN::NeuralNetwork::predict(std::vector<double> inputs)
+std::vector<Eigen::MatrixXd *> OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::MatrixXd targets)
+{
+    if (epochs == 0 || inputs.size() == 0 || targets.size() == 0 || inputs.row(0).cols() != targets.row(0).cols())
+    {
+        std::cerr << "Missing train data!" << std::endl;
+        assert(false);
+    }
+
+    for (int epoch = 0; epoch < epochs; epoch++)
+    {
+        for (int i = 0; i < inputs.rows(); i++)
+        {
+            Eigen::MatrixXd input = inputs.row(i).matrix();
+            Eigen::MatrixXd target = targets.row(i).matrix();
+
+            Eigen::MatrixXd output = this->predict(input);
+
+            Eigen::MatrixXd error = (output - target);
+
+
+            int output_layer_index = (this->network_layers.size() - 1);
+            int first_hidden_layer_index = (output_layer_index - 1);
+
+            /**
+             * Output to the firt hidden
+             * ----------------------------------
+             * */
+            Layer* current_layer = this->get_layer(output_layer_index);
+            Eigen::MatrixXd current_values = *current_layer->to_matrix_derivated();
+
+            //Calculate the gradient of current layer
+            Eigen::MatrixXd gradients = error.cwiseProduct(current_values);
+
+            /**
+             * Multiply the transposed version of the gradient matrix by the output of the previous layer 
+             * and transpose it
+             * */
+            Eigen::MatrixXd delta_weights = gradients.transpose() * (*this->get_layer(first_hidden_layer_index)->to_matrix_activated());
+            Eigen::MatrixXd delta_weights_transposed = delta_weights.transpose();
+
+            /**
+             * Get the weights between the previous layer and the current one
+             * */
+            Eigen::MatrixXd current_weights = *this->weight_matrices.at(first_hidden_layer_index);
+
+            /**
+             * Subtract the current weights by the delta weight
+             * */
+            Eigen::MatrixXd new_current_weights = current_weights - delta_weights_transposed;
+
+            /**
+             * Update the weights with the new one
+             * */
+            *this->weight_matrices.at(first_hidden_layer_index) = new_current_weights;
+
+
+            for (int j = (output_layer_index - 1); j > 0; j--)
+            {
+                
+                /**
+                 * Get the current p layer
+                 * */
+                current_layer = this->get_layer(j);
+                Layer* previous_layer = this->get_layer(j - 1);
+
+                /**
+                 * Get the current valuer
+                 * */
+                current_values = *current_layer->to_matrix_derivated();
+            
+                /**
+                 * Get the current weights and transpose it
+                 * */
+                current_weights = *this->weight_matrices.at(j);
+
+                /**
+                 * Multiply the current weights by the gradients of the previous layer
+                 * */
+                Eigen::MatrixXd gradients_weights = (gradients * current_weights.transpose());
+                gradients = gradients_weights.cwiseProduct(current_values);
+
+                /**
+                 * Get the weights between the previous layer and the current one
+                 * */
+                current_weights = *this->weight_matrices.at(j - 1);
+
+                /**
+                 * Get the previous layers value, 
+                 * If the previous layer is the input layer, get the raw value
+                 * If not, get the activated values
+                 * */
+                Eigen::MatrixXd previous_layers_values = ((j - 1) == 0)
+                    ? *previous_layer->to_matrix()
+                    : *previous_layer->to_matrix_activated();
+                
+
+                /**
+                 * Multiply the previous output/input values by the previous calculated gradients
+                 * */
+                delta_weights = previous_layers_values.transpose() * gradients;
+
+                /**
+                 *  Calculate the new weights
+                 * */
+                new_current_weights = current_weights - delta_weights;
+
+                *this->weight_matrices.at(j - 1) = new_current_weights;
+            }
+        }   
+    }
+    return { new Eigen::MatrixXd(3, 3), };
+}
+
+Eigen::MatrixXd OpenNN::NeuralNetwork::predict(Eigen::MatrixXd inputs)
 {
     if (inputs.size() != this->get_layer(0)->get_neurons().size())
     {
@@ -49,7 +162,10 @@ Eigen::MatrixXd OpenNN::NeuralNetwork::predict(std::vector<double> inputs)
     int layer_count = this->get_layers().size() - 1;
 
     for (int i = 0; i < inputs.size(); i++)
-        input_layer->get_neuron(i)->set_value(inputs.at(i));
+    {
+        double value = inputs(0, i);
+        input_layer->get_neuron(i)->set_value(value);
+    }
 
     for (int i = 0; i < layer_count; i++)
     {

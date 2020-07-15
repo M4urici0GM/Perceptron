@@ -43,3 +43,13 @@ Eigen::MatrixXd* OpenNN::Layer::to_matrix_activated()
     }
     return matrix;
 }
+
+
+Eigen::MatrixXd* OpenNN::Layer::to_matrix_derivated()
+{
+    Eigen::MatrixXd* matrix = new Eigen::MatrixXd(1, this->neurons.size());
+    for (int i = 0; i < this->neurons.size(); i++) {
+        (*matrix)(0, i) = this->neurons.at(i)->get_derivated_value();
+    }
+    return matrix;
+}

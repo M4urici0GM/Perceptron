@@ -30,6 +30,5 @@ double OpenNN::Neuron::get_derivated_value()
 void OpenNN::Neuron::set_value(double value)
 {
     this->value = value;
-    if (value != 0)
-        this->activate();
+    this->activate();       
 }

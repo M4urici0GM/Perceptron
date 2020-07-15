@@ -8,7 +8,7 @@
 
 double Utils::sigmoid(double value)
 {
-    return (value / (1.0 + value));
+    return (1 / (1.0 + std::exp(-value)));
 }
 
 double Utils::tahn(double value)
