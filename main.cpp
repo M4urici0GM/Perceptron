@@ -9,7 +9,7 @@
 
 int main()
 {
-    OpenNN::NeuralNetwork* neural_network = new OpenNN::NeuralNetwork({ 4, 5, 5, 4, 3 }, 0.5);
+    OpenNN::NeuralNetwork* neural_network = new OpenNN::NeuralNetwork({ 4, 16, 16, 3 }, 0.5);
 
     neural_network->initialize_network();
     // neural_network->print_network();

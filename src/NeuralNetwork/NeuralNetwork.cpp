@@ -39,7 +39,7 @@ OpenNN::Layer* OpenNN::NeuralNetwork::get_layer(int index)
 
 std::vector<Eigen::MatrixXd *> OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::MatrixXd targets)
 {
-    if (epochs == 0 || inputs.size() == 0 || targets.size() == 0 || inputs.row(0).cols() != targets.row(0).cols())
+    if (epochs == 0 || inputs.size() == 0 || targets.size() == 0)
     {
         std::cerr << "Missing train data!" << std::endl;
         assert(false);
