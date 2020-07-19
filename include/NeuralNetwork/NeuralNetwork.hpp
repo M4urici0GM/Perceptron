@@ -19,11 +19,12 @@ namespace OpenNN
             Eigen::MatrixXd predict(Eigen::MatrixXd inputs);
             Layer* get_layer(int index);
             void print_network();
-
+            void calculate_error(Eigen::MatrixXd output, Eigen::MatrixXd target);
         private:
             std::vector<Layer *> network_layers;
             std::vector<Eigen::MatrixXd *> weight_matrices;
             std::vector<int> topology;
+            std::vector<double> historical_errors;
             double learning_rate;
     };
 };

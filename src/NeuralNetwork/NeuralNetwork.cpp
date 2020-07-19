@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <cassert>
+#include <cmath>
 
 #include "../../include/NeuralNetwork/NeuralNetwork.hpp"
 #include "../../include/Utils/Stopwatch.hpp"
@@ -37,6 +38,27 @@ OpenNN::Layer* OpenNN::NeuralNetwork::get_layer(int index)
     return this->network_layers.at(index);
 }
 
+
+/**
+ * Calculate the total network error based on output/target
+ * E(Y, y) = Σ (1/2(Y - y)^2)
+ * where
+ *  Y = output
+ *  y = target
+ * */
+void OpenNN::NeuralNetwork::calculate_error(Eigen::MatrixXd output, Eigen::MatrixXd target)
+{
+
+    Eigen::MatrixXd error = (output - target);
+
+   double total_error = 0.00;
+
+    for (int j = 0; j < error.cols(); j++)
+        total_error += ((1/2)(std::pow(error(0, j), 2)));
+
+    this->historical_errors.push_back(total_error);
+}
+
 std::vector<Eigen::MatrixXd *> OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::MatrixXd targets)
 {
     if (epochs == 0 || inputs.size() == 0 || targets.size() == 0)
@@ -56,6 +78,7 @@ std::vector<Eigen::MatrixXd *> OpenNN::NeuralNetwork::train(int epochs, Eigen::M
 
             Eigen::MatrixXd error = (output - target);
 
+            this->calculate_error(output, input);
 
             int output_layer_index = (this->network_layers.size() - 1);
             int first_hidden_layer_index = (output_layer_index - 1);
@@ -145,9 +168,12 @@ std::vector<Eigen::MatrixXd *> OpenNN::NeuralNetwork::train(int epochs, Eigen::M
 
                 *this->weight_matrices.at(j - 1) = new_current_weights;
             }
+
+
         }   
     }
-    return { new Eigen::MatrixXd(3, 3), };
+    //Returns the trained model.
+    return this->weight_matrices;
 }
 
 Eigen::MatrixXd OpenNN::NeuralNetwork::predict(Eigen::MatrixXd inputs)
