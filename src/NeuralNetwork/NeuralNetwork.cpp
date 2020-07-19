@@ -21,6 +21,20 @@ OpenNN::NeuralNetwork::~NeuralNetwork()
 
     delete this;
 }
+
+void OpenNN::NeuralNetwork::load_model(const char* filename)
+{
+
+}
+
+void OpenNN::NeuralNetwork::save_model(const char* filename)
+{
+
+}
+
+/**
+ * Return a vector of layer pointers
+ * */
 std::vector<OpenNN::Layer *> OpenNN::NeuralNetwork::get_layers()
 {
     return this->network_layers;
@@ -51,15 +65,15 @@ void OpenNN::NeuralNetwork::calculate_error(Eigen::MatrixXd output, Eigen::Matri
 
     Eigen::MatrixXd error = (output - target);
 
-   double total_error = 0.00;
+    double total_error = 0.00;
 
     for (int j = 0; j < error.cols(); j++)
-        total_error += ((1/2)(std::pow(error(0, j), 2)));
+        total_error += (1/2) * (std::pow(error(0, j), 2));
 
     this->historical_errors.push_back(total_error);
 }
 
-std::vector<Eigen::MatrixXd *> OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::MatrixXd targets)
+void OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::MatrixXd targets)
 {
     if (epochs == 0 || inputs.size() == 0 || targets.size() == 0)
     {
@@ -78,7 +92,7 @@ std::vector<Eigen::MatrixXd *> OpenNN::NeuralNetwork::train(int epochs, Eigen::M
 
             Eigen::MatrixXd error = (output - target);
 
-            this->calculate_error(output, input);
+            this->calculate_error(output, target);
 
             int output_layer_index = (this->network_layers.size() - 1);
             int first_hidden_layer_index = (output_layer_index - 1);
@@ -168,17 +182,20 @@ std::vector<Eigen::MatrixXd *> OpenNN::NeuralNetwork::train(int epochs, Eigen::M
 
                 *this->weight_matrices.at(j - 1) = new_current_weights;
             }
-
-
         }   
     }
-    //Returns the trained model.
-    return this->weight_matrices;
 }
 
 Eigen::MatrixXd OpenNN::NeuralNetwork::predict(Eigen::MatrixXd inputs)
 {
-    if (inputs.size() != this->get_layer(0)->get_neurons().size())
+
+    if (inputs.rows() > 1)
+    {
+        std::cerr << "The number of rows cannot exceed 1" << std::endl;
+        assert(false);
+    }
+
+    if (inputs.cols() != this->get_layer(0)->get_neurons().size())
     {
         std::cerr << "Invalid input size!" << std::endl;
         assert(false);
