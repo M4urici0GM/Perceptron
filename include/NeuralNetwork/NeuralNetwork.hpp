@@ -22,6 +22,7 @@ namespace OpenNN
             void load_model(const char* filename);
             void save_model(const char* filename);
 
+            std::vector<double> get_errors();
         private:
             std::vector<Layer *> network_layers;
             std::vector<Eigen::MatrixXd *> weight_matrices;

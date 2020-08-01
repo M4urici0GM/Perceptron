@@ -32,6 +32,11 @@ void OpenNN::NeuralNetwork::save_model(const char* filename)
 
 }
 
+std::vector<double> OpenNN::NeuralNetwork::get_errors()
+{
+    return this->historical_errors;
+}
+
 /**
  * Return a vector of layer pointers
  * */
@@ -65,12 +70,20 @@ void OpenNN::NeuralNetwork::calculate_error(Eigen::MatrixXd output, Eigen::Matri
 
     Eigen::MatrixXd error = (output - target);
 
-    double total_error = 0.00;
+    double error_sum = 0.00;
 
-    for (int j = 0; j < error.cols(); j++)
-        total_error += (1/2) * (std::pow(error(0, j), 2));
+    int col_count = error.cols();
 
-    this->historical_errors.push_back(total_error);
+    for (int j = 0; j < col_count; j++)
+    {
+        double error_value = error(0, j);
+        double expValue = std::pow(error_value, 2);
+        error_sum += expValue;
+    }
+
+    double mse = (1/(double)col_count) * error_sum;
+
+    this->historical_errors.push_back(mse);
 }
 
 void OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::MatrixXd targets)
@@ -130,6 +143,11 @@ void OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::Mat
             *this->weight_matrices.at(first_hidden_layer_index) = new_current_weights;
 
 
+            // std::cout << "Current Weights: " << current_weights << std::endl;
+            // std::cout << "New Weights: " << new_current_weights << std::endl;
+            // std::cout << "Updated Weights: " << *this->weight_matrices.at(first_hidden_layer_index) << std::endl;
+
+
             for (int j = (output_layer_index - 1); j > 0; j--)
             {
                 
@@ -158,7 +176,7 @@ void OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::Mat
                 /**
                  * Get the weights between the previous layer and the current one
                  * */
-                current_weights = *this->weight_matrices.at(j - 1);
+                Eigen::MatrixXd _current_weights = *this->weight_matrices.at(j - 1);
 
                 /**
                  * Get the previous layers value, 
@@ -178,7 +196,7 @@ void OpenNN::NeuralNetwork::train(int epochs, Eigen::MatrixXd inputs, Eigen::Mat
                 /**
                  *  Calculate the new weights
                  * */
-                new_current_weights = current_weights - delta_weights;
+                new_current_weights = _current_weights - delta_weights;
 
                 *this->weight_matrices.at(j - 1) = new_current_weights;
             }
