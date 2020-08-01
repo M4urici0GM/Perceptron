@@ -18,4 +18,4 @@ add_executable(
     src/NeuralNetwork/Layer.cpp
     src/NeuralNetwork/NeuralNetwork.cpp
     main.cpp
-)
+        include/Data/iris_data.hpp include/Data/iris_dataset.hpp src/Data/iris_dataset.cpp)

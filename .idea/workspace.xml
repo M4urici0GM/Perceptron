@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="v2" targetName="Perceptron" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -28,67 +30,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e20d19e9-aa2d-4e5e-92b8-fb489219c386" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Perceptron.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/src/Layer.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/src/Matrix.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/src/Neuron.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/src/Perceptron.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Perceptron.dir/src/Utils.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Perceptron.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Perceptron.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/error_history.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Layer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Matrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Neuron.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Perceptron.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Utils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrix.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Neuron.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Perceptron.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils.cpp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Data/iris_data.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Data/iris_dataset.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Data/iris_dataset.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Utils/Utils.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/Utils/Utils.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Utils.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +47,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -112,11 +62,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowDebug.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="settings.editor.selected.configurable" value="language.cpp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Perceptron" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="v2" TARGET_NAME="Perceptron" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="v2" RUN_TARGET_NAME="Perceptron">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -130,6 +87,7 @@
       <updated>1593910332489</updated>
       <workItem from="1593910338034" duration="61194000" />
       <workItem from="1594170793887" duration="8456000" />
+      <workItem from="1596251300212" duration="2104000" />
     </task>
     <servers />
   </component>
@@ -149,10 +107,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593938686939">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="872" y="183" key="#New_File_Extensions" timestamp="1596252441537">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="872" y="183" key="#New_File_Extensions/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252441537" />
+    <state x="257" y="34" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596252116107">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1593938686939" />
+    <state x="257" y="34" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252116107" />
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593921926217">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -161,46 +124,56 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="540" height="466" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1594177437133" />
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1594179956562">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="868" y="176" key="FileChooserDialogImpl" timestamp="1596251315159">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1594179956562" />
-    <state width="1367" height="341" key="GridCell.Tab.0.bottom" timestamp="1594179967344">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="868" y="176" key="FileChooserDialogImpl/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596251315159" />
+    <state width="2517" height="352" key="GridCell.Tab.0.bottom" timestamp="1596252306032">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="1367" height="341" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1594179967344" />
-    <state width="1367" height="341" key="GridCell.Tab.0.center" timestamp="1594179967344">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="352" key="GridCell.Tab.0.bottom/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252306032" />
+    <state width="2517" height="352" key="GridCell.Tab.0.center" timestamp="1596252306032">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="1367" height="341" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1594179967344" />
-    <state width="1367" height="341" key="GridCell.Tab.0.left" timestamp="1594179967343">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="352" key="GridCell.Tab.0.center/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252306032" />
+    <state width="2517" height="352" key="GridCell.Tab.0.left" timestamp="1596252306031">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="1367" height="341" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1594179967343" />
-    <state width="1367" height="341" key="GridCell.Tab.0.right" timestamp="1594179967344">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="352" key="GridCell.Tab.0.left/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252306031" />
+    <state width="2517" height="352" key="GridCell.Tab.0.right" timestamp="1596252306032">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="1367" height="341" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1594179967344" />
-    <state width="1367" height="186" key="GridCell.Tab.1.bottom" timestamp="1594179967337">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="352" key="GridCell.Tab.0.right/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252306032" />
+    <state width="2517" height="352" key="GridCell.Tab.1.bottom" timestamp="1596252306033">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="1367" height="186" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1594179967337" />
-    <state width="1367" height="186" key="GridCell.Tab.1.center" timestamp="1594179967337">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="352" key="GridCell.Tab.1.bottom/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252306033" />
+    <state width="2517" height="352" key="GridCell.Tab.1.center" timestamp="1596252306033">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="1367" height="186" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1594179967337" />
-    <state width="1367" height="186" key="GridCell.Tab.1.left" timestamp="1594179967337">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="352" key="GridCell.Tab.1.center/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252306033" />
+    <state width="2517" height="352" key="GridCell.Tab.1.left" timestamp="1596252306032">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="1367" height="186" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1594179967337" />
-    <state width="1367" height="186" key="GridCell.Tab.1.right" timestamp="1594179967337">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="352" key="GridCell.Tab.1.left/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252306032" />
+    <state width="2517" height="352" key="GridCell.Tab.1.right" timestamp="1596252306033">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="1367" height="186" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1594179967337" />
-    <state x="184" y="14" key="SettingsEditor" timestamp="1593911159867">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="352" key="GridCell.Tab.1.right/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252306033" />
+    <state x="345" y="20" key="SettingsEditor" timestamp="1596252139201">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1593911159867" />
+    <state x="345" y="20" key="SettingsEditor/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596252139201" />
     <state x="404" y="110" width="540" height="524" key="StructurePopup" timestamp="1593961051547">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -209,10 +182,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1594173879775" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1593964229437">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="635" y="235" key="run.anything.popup" timestamp="1596253324431">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1593964229437" />
+    <state x="635" y="235" key="run.anything.popup/0.0.2560.1050/2560.414.1366.738@0.0.2560.1050" timestamp="1596253324431" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1593910824008">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
