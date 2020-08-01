@@ -5,8 +5,7 @@
 #include <algorithm>
 #include <iostream>
 #include <eigen3/Eigen/Dense>
-
-#include "iris_data.hpp"
+#include <Data/iris_data.hpp>
 
 namespace Data {
     class iris_dataset {

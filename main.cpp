@@ -43,7 +43,7 @@ int main()
         target_data = dataset->to_target_matrix();
 
         
-        neural_network->train(100, train_data, target_data);
+        neural_network->train(1, train_data, target_data);
 
         std::ofstream output_file ("error.data", std::ofstream::binary);
 

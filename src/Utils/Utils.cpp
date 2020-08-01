@@ -1,5 +1,4 @@
 #include "../../include/Utils/Utils.hpp"
-#include "../../../../../../../Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/include/sstream"
 
 #include <cmath>
 #include <ctime>
@@ -7,10 +6,11 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <sstream>
 
 double Utils::sigmoid(double value)
 {
-    return (1 / (1.0 + std::exp(-value)));
+    return (1 / (1.0 + std::exp(value)));
 }
 
 double Utils::tahn(double value)
@@ -27,11 +27,11 @@ double Utils::random_number()
 {
     std::random_device randomDevice;
 	std::mt19937 generate(randomDevice());
-	std::uniform_real_distribution<> distribution(0, 1);
+	std::uniform_real_distribution<> distribution(-1, 1);
 	return distribution(generate);
 }
 
-std::vector<std::string> split_string(const std::string& string, char delimiter)
+std::vector<std::string> Utils::split_string(const std::string& string, char delimiter)
 {
     std::vector<std::string> splitted_strings;
     std::string data;
